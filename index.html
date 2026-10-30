@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShuttleSense | Campus Mobility</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;ssss
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #17243b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #102c57;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #53e0d0;
+        }
+
+        header p {
+            color: #dce8ff;
+            font-size: 13px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #12376e, #0879db);
+            color: white;
+            padding: 45px 35px;
+            border-radius: 22px;
+            margin-bottom: 30px;
+        }
+
+        .hero small {
+            color: #68f2df;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            line-height: 1.15;
+            margin: 12px 0;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #e3edff;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            font-size: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .card,
+        .panel {
+            background: white;
+            padding: 24px;
+            border-radius: 17px;
+            border: 1px solid #e3eaf4;
+            box-shadow: 0 5px 18px #16365d0b;
+        }
+
+        .card .emoji {
+            font-size: 27px;
+        }
+
+        .card h3 {
+            font-size: 15px;
+            margin-top: 12px;
+        }
+
+        .value {
+            font-size: 27px;
+            color: #0966bd;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .note {
+            color: #68778d;
+            font-size: 13px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #fff0cc;
+            color: #795100;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .panel {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 15px 0 7px;
+        }
+
+        select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #cbd7e6;
+            border-radius: 10px;
+            background: white;
+            color: #17243b;
+            font-size: 15px;
+        }
+
+        button {
+            background: #0968c5;
+            color: white;
+            border: none;
+            padding: 13px 20px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+
+        button:hover {
+            background: #064d96;
+        }
+
+        #result {
+            background: #e9f7f5;
+            border-left: 4px solid #13a995;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 18px;
+            overflow-wrap: anywhere;
+        }
+
+        .info {
+            background: #e8f5ff;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 24px;
+        }
+
+        .info h3 {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #102c57;
+            color: #e4ecfa;
+            text-align: center;
+            padding: 22px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 30px 22px;
+            }
+
+            header {
+                padding: 16px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Shuttle<span>Sense</span> 🚌</div>
+        <p>Smarter Campus Mobility</p>
+    </header>
+
+    <main>                     
+
+        <section class="hero">
+            <small>YOUR CAMPUS. YOUR JOURNEY.</small>
+            <h1>Make every campus journey easier.</h1>
+            <p>
+                A student-focused concept to help you understand shuttle
+                timings, estimated crowd levels and campus pickup points
+                in one simple place.
+            </p>
+        </section>
+
+        <h2>Campus Shuttle Overview</h2>
+
+        <section class="cards">
+            <div class="card">
+                <div class="emoji">🚌</div>
+                <h3>Next Shuttle</h3>
+                <div class="value">5 min</div>
+                <p class="note">Illustrative arrival estimate</p>
+                <span class="tag">DEMO DATA</span>
+            </div>
+
+            <div class="card">
+                <div class="emoji">👥</div>
+                <h3>Estimated Crowd</h3>
+                <div class="value">Medium</div>
+                <p class="note">Sample crowd-level indicator</p>
+                <span class="tag">DEMO DATA</span>
+            </div>
+
+            <div class="card">
+                <div class="emoji">📍</div>
+                <h3>Pickup Point</h3>
+                <div class="value">Campus Stop</div>
+                <p class="note">Example location, not live tracking</p>
+                <span class="tag">DEMO DATA</span>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>🔎 Explore Shuttle Options</h2>
+            <p class="note">
+                Choose a sample pickup point and crowd level to try the demo.
+            </p>
+
+            <label for="stop">Select Pickup Point</label>
+            <select id="stop">
+                <option value="Main Gate">Main Gate</option>
+                <option value="Academic Block">Academic Block</option>
+                <option value="Hostel Area">Hostel Area</option>
+                <option value="Campus Stop">Campus Stop</option>
+            </select>
+
+            <label for="crowd">Select Expected Crowd</label>
+            <select id="crowd">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <button type="button" onclick="showStatus()">
+                Check Demo Status
+            </button>
+
+            <button type="button" onclick="refreshDemo()">
+                Refresh Demo
+            </button>
+
+            <p id="result" aria-live="polite">
+                Choose your options to see the demo status.
+            </p>
+        </section>
+
+        <section class="info">
+            <h3>🛡️ Travel Smart, Travel Safe</h3>
+            <p>• Wait at designated pickup points.</p>
+            <p>• Follow campus transport instructions.</p>
+            <p>• Allow other passengers to board safely.</p>
+            <p>• Confirm actual shuttle timings with official sources.</p>
+        </section>
+
+        <section class="info">
+            <h3>💡 About ShuttleSense</h3>
+            <p>
+                ShuttleSense is a student project concept exploring common
+                campus transportation challenges. It demonstrates how
+                shuttle information could be presented in one place.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        INT335 Design Thinking Project · ShuttleSense
+        <br>
+        Student prototype · Not connected to live LPU transport data
+    </footer>
+
+    <script>
+        function showStatus() {
+            const stop = document.getElementById("stop").value;
+            const crowd = document.getElementById("crowd").value;
+
+            document.getElementById("result").textContent =
+                "Pickup: " + stop +
+                " | Sample crowd: " + crowd +
+                " | Arrival estimate: 5 min (demo only)";
+        }
+
+        function refreshDemo() {
+            document.getElementById("stop").selectedIndex = 0;
+            document.getElementById("crowd").value = "Medium";
+            showStatus();
+        }
+    </script>
+
+</body>
+
+</html>
